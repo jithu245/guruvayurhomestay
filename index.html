@@ -12,7 +12,7 @@
     <!-- Canonical & Alternate -->
     <link rel="canonical" href="https://guruvayurhomestay.in/">
     <link rel="alternate" hreflang="en-IN" href="https://guruvayurhomestay.in/">
-    <meta name="theme-color" content="#7B1F1F">
+    <meta name="theme-color" content="#9E4545">
 
     <!-- GEO Meta - Geographic Targeting -->
     <meta name="geo.region" content="IN-KL">
@@ -371,14 +371,14 @@
         :root {
             --gold: #C8922A;
             --gold-light: #E8B84B;
-            --maroon: #7B1F1F;
-            --maroon-dark: #5a1717;
+            --maroon: #9E4545;
+            --maroon-dark: #7B3535;
             --green: #2D6A4F;
             --cream: #FFF8F0;
             --white: #FFFFFF;
             --charcoal: #2C2C2C;
             --gold-gradient: linear-gradient(135deg, #C8922A, #E8B84B);
-            --maroon-gradient: linear-gradient(135deg, #7B1F1F, #a12d2d);
+            --maroon-gradient: linear-gradient(135deg, #9E4545, #b85555);
             --shadow: 0 4px 15px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
             --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
             --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.06), 0 10px 25px rgba(200, 146, 42, 0.12);
@@ -440,11 +440,12 @@
         .section-divider {
             width: 80%;
             max-width: 1000px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), var(--maroon), var(--gold), transparent);
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--maroon-dark), var(--gold), transparent);
             margin: 80px auto;
-            opacity: 0.6;
-            border-radius: 2px
+            opacity: 0.8;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(200, 146, 42, 0.3);
         }
 
         .section-title {
@@ -1151,8 +1152,9 @@
 
         /* ABOUT */
         .about-section {
-            background: var(--white);
-            position: relative
+            background: linear-gradient(135deg, #ffffff 0%, #fff8f0 100%);
+            position: relative;
+            padding: 100px 0 80px;
         }
 
         .about-section::before {
@@ -1162,8 +1164,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.18'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             pointer-events: none
+        }
+
+        .about-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 30px rgba(123, 31, 31, 0.1);
+            border: 1px solid rgba(200, 146, 42, 0.12);
         }
 
         .about-content {
@@ -1278,7 +1288,34 @@
 
         /* ROOMS */
         .rooms-section {
-            background: var(--cream)
+            background: linear-gradient(180deg, #fffcf5 0%, #fff5e8 50%, #ffefe0 100%);
+            position: relative;
+        }
+        
+        .rooms-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.18'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .room-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(123, 31, 31, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(200, 146, 42, 0.15);
+        }
+
+        .room-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(123, 31, 31, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: rgba(200, 146, 42, 0.3);
         }
 
         .rooms-grid {
@@ -1613,9 +1650,10 @@
 
         /* ========== REVIEWS MARQUEE ========== */
         .reviews-section {
-            background: var(--white);
+            background: linear-gradient(180deg, #fffdf9 0%, #fff8f0 50%, #fff5e8 100%);
             position: relative;
-            overflow: hidden
+            overflow: hidden;
+            padding: 120px 0 80px;
         }
 
         .reviews-section::before {
@@ -1625,8 +1663,22 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at 50% 0%, rgba(200, 146, 42, 0.04) 0%, transparent 60%);
-            pointer-events: none
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(123, 31, 31, 0.08);
+            border: 1px solid rgba(200, 146, 42, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(123, 31, 31, 0.15);
         }
 
         .reviews-overall-wrap {
@@ -1839,7 +1891,32 @@
 
         /* GALLERY */
         .gallery-section {
-            background: var(--cream)
+            background: linear-gradient(180deg, #fff5ee 0%, #ffe8d8 100%);
+            padding: 100px 0 80px;
+            position: relative;
+        }
+        
+        .gallery-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8922A' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M25 25a5 5 0 110-10 5 5 0 010 10zm0-15a5 5 0 110-10 5 5 0 010 10z'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(123, 31, 31, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(123, 31, 31, 0.2);
         }
 
         .gallery-filters {
@@ -1927,7 +2004,35 @@
 
         /* AMENITIES */
         .amenities-section {
-            background: var(--white)
+            background: linear-gradient(135deg, #ffffff 0%, #faf5ee 50%, #fffef9 100%);
+            position: relative;
+        }
+        
+        .amenities-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23C8922A' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .amenity-item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(123, 31, 31, 0.06);
+            border: 1px solid rgba(200, 146, 42, 0.1);
+        }
+
+        .amenity-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(123, 31, 31, 0.12);
+            border-color: rgba(200, 146, 42, 0.25);
         }
 
         .amenities-grid {
@@ -1976,9 +2081,46 @@
 
         /* WHY CHOOSE US SECTION */
         .why-section {
-            background: var(--white);
-            padding: 80px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #fefcf8 40%, #faf5ed 100%);
+            padding: 100px 0 80px;
             position: relative;
+        }
+        
+        .why-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2.5l4 4-4 4zm0-14V0l4 4-4 4v-2.5l4 4-4 4v-2.5l4 4-4 4V10l4 4-4 4v-2.5l4 4-4 4v-2.5l4 4-4 4V6l4 4-4 4v-2.5l4 4-4 4z' fill='%23C8922A' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .why-item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(123, 31, 31, 0.06);
+            border: 1px solid rgba(200, 146, 42, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .why-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--gold), var(--maroon));
+            border-radius: 4px 0 0 4px;
+        }
+
+        .why-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 30px rgba(123, 31, 31, 0.12);
         }
 
         .why-grid {
@@ -2044,8 +2186,29 @@
 
         /* DISTANCE TABLE SECTION */
         .distance-section {
-            background: var(--cream);
-            padding: 80px 0;
+            background: linear-gradient(180deg, #fff0e0 0%, #ffe4cc 100%);
+            padding: 100px 0 80px;
+            position: relative;
+        }
+        
+        .distance-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8922A' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .distance-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(123, 31, 31, 0.12);
         }
 
         .distance-table-wrap {
@@ -2061,7 +2224,7 @@
         }
 
         .distance-table thead {
-            background: var(--maroon);
+            background: linear-gradient(135deg, #8B3A3A, #6B2A2A);
             color: var(--white);
         }
 
@@ -2091,8 +2254,47 @@
 
         /* HOW TO BOOK SECTION */
         .booking-steps-section {
-            background: var(--white);
-            padding: 80px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #faf0e0 100%);
+            padding: 100px 0 80px;
+            position: relative;
+        }
+        
+        .booking-steps-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .step-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(123, 31, 31, 0.08);
+            border: 1px solid rgba(200, 146, 42, 0.12);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .step-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--maroon));
+            border-radius: 20px 20px 0 0;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(123, 31, 31, 0.15);
         }
 
         .steps-grid {
@@ -2148,10 +2350,21 @@
 
         /* PERFECT FOR SECTION */
         .perfect-section {
-            background: var(--maroon);
-            padding: 80px 0;
+            background: linear-gradient(135deg, #8B2E2E 0%, #6B2020 50%, #5a1818 100%);
+            padding: 100px 0 80px;
             position: relative;
             overflow: hidden;
+        }
+
+        .perfect-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
         }
 
         .perfect-section .section-title h2 {
@@ -2209,14 +2422,60 @@
 
         /* EVENTS SECTION */
         .events-section {
-            background: var(--white);
-            padding: 80px 0;
+            background: linear-gradient(135deg, #fffcf8 0%, #fff5ee 40%, #fff0e0 100%);
+            padding: 100px 0 80px;
             position: relative;
+        }
+        
+        .events-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.18'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
         }
 
         .events-content {
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .events-text {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .events-card-right {
+            flex: 1;
+            max-width: 450px;
+        }
+
+        .events-card-right .room-card-event {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(123, 31, 31, 0.15);
+            border: 1px solid rgba(200, 146, 42, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .events-card-right .room-card-event:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(123, 31, 31, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .events-content {
+                flex-direction: column;
+            }
+            .events-card-right {
+                max-width: 100%;
+                width: 100%;
+            }
         }
 
         .events-text h3 {
@@ -2464,7 +2723,35 @@
 
         /* ATTRACTIONS SECTION */
         .attractions-section {
-            background: var(--cream);
+            background: linear-gradient(180deg, #fff0e0 0%, #ffe4c4 100%);
+            padding: 100px 0 80px;
+            position: relative;
+        }
+        
+        .attractions-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8922A' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M0 0h40v40H0V0zm20 20l-10-10 10-10 10 10-10 10z'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .attraction-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(123, 31, 31, 0.08);
+            border: 1px solid rgba(200, 146, 42, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(123, 31, 31, 0.15);
+        };
             padding: 80px 0;
         }
 
@@ -2569,10 +2856,29 @@
 
         /* MASSAGE SECTION */
         .massage-section {
-            background: var(--cream);
+            background: linear-gradient(180deg, #fff8f0 0%, #ffe4cc 100%);
             position: relative;
             overflow: hidden;
-            padding: 80px 0;
+            padding: 100px 0 80px;
+        }
+        
+        .massage-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8922A' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M25 25a5 5 0 110-10 5 5 0 010 10zm0-15a5 5 0 110-10 5 5 0 010 10z'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .massage-quote {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(123, 31, 31, 0.12);
+            border-left: 5px solid var(--gold);
         }
 
         .massage-container {
@@ -2680,7 +2986,7 @@
 
         /* SERVICES */
         .services-section {
-            background: linear-gradient(135deg, #7B1F1F 0%, #5a1717 100%);
+            background: linear-gradient(135deg, #8B2E2E 0%, #6B2020 100%);
             color: var(--white);
             position: relative;
             overflow: hidden
@@ -2693,8 +2999,23 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.18'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             pointer-events: none
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            border-color: rgba(200, 146, 42, 0.5);
         }
 
         .services-section .section-title h2 {
@@ -2839,7 +3160,20 @@
 
         /* HOW TO REACH */
         .reach-section {
-            background: var(--white)
+            background: linear-gradient(135deg, #ffffff 0%, #fef0e0 100%);
+            padding: 100px 0 80px;
+            position: relative;
+        }
+        
+        .reach-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
         }
 
         .reach-table {
@@ -2848,7 +3182,8 @@
             border-spacing: 0;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow-md)
+            box-shadow: 0 8px 30px rgba(123, 31, 31, 0.12);
+            background: #fff;
         }
 
         .reach-table thead {
@@ -2908,7 +3243,38 @@
 
         /* CONTACT */
         .contact-section {
-            background: var(--cream)
+            background: linear-gradient(180deg, #fffaf5 0%, #fff0e0 50%, #ffe8d0 100%);
+            position: relative;
+            padding: 100px 0 80px;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.15'%3E%3Cpath d='M50 50c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm0 50c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zM10 10c5.523 0 10-4.477 10-10S15.523-10 10-10 0-5.477 0 0s4.477 10 10 10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .contact-info-card, .contact-form-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(123, 31, 31, 0.1);
+            border: 1px solid rgba(200, 146, 42, 0.15);
+        }
+
+        .contact-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(200, 146, 42, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            padding-left: 10px;
+            border-bottom-color: var(--gold);
         }
 
         .contact-grid {
@@ -3102,7 +3468,7 @@
         }
 
         .map-header-wrap {
-            background: linear-gradient(135deg, var(--maroon) 0%, #5a1717 100%);
+            background: linear-gradient(135deg, #8B3A3A 0%, #6B2A2A 100%);
             padding: 60px 0 40px;
             text-align: center;
             position: relative;
@@ -3116,7 +3482,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8922A' fill-opacity='0.18'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             pointer-events: none
         }
 
@@ -3268,7 +3634,8 @@
             color: rgba(255, 255, 255, 0.7);
             padding: 80px 0 30px;
             position: relative;
-            overflow: hidden
+            overflow: hidden;
+            border-top: 3px solid var(--gold);
         }
 
         .footer::before {
@@ -4223,7 +4590,35 @@
 
         /* FAQ ACCORDION */
         .faq-section {
-            background: var(--cream)
+            background: linear-gradient(180deg, #fff8f0 0%, #ffeedd 100%);
+            position: relative;
+            padding: 100px 0 80px;
+        }
+        
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8922A' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M0 0h50v50H0V0zm25 25a5 5 0 110-10 5 5 0 010 10zm0-15a5 5 0 110-10 5 5 0 010 10z'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(123, 31, 31, 0.06);
+            border: 1px solid rgba(200, 146, 42, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(123, 31, 31, 0.12);
+            border-color: rgba(200, 146, 42, 0.2);
         }
 
         .faq-grid {
@@ -5264,10 +5659,6 @@
                         <div class="feat-icon"><i class="fas fa-clock"></i></div>
                         <h4>24/7 Check-in Support</h4>
                     </div>
-                    <div class="feature-card" data-aos="fade-up">
-                        <div class="feat-icon"><i class="fas fa-calendar-check"></i></div>
-                        <h4>Events & Weddings</h4>
-                    </div>
                 </div>
             </div>
         </section>
@@ -5304,6 +5695,31 @@
                                 target="_blank" class="events-cta events-insta">
                                 <i class="fab fa-instagram"></i> View Wedding Works
                             </a>
+                        </div>
+                    </div>
+                    <div class="events-card-right" data-aos="fade-left">
+                        <div class="room-card room-card-event">
+                            <div class="room-price room-price-event">Events & Weddings</div>
+                            <div class="room-info room-event-info">
+                                <h3><i class="fas fa-champagne-glasses"></i>Host Your Event Here</h3>
+                                <p>Heritage Pool Villa is the perfect venue for destination weddings, engagements, Haldi ceremonies, and Choroonu events. Private pool, garden space, and full privacy.</p>
+                                <div class="room-amenities"><span><i class="fas fa-users"></i> Up to 14 Guests</span><span><i class="fas fa-swimming-pool"></i> Pool Venue</span><span><i class="fas fa-utensils"></i> Catering</span></div>
+                                <div class="event-video-wrap">
+                                    <div class="swiper event-swiper" id="swiper-event-room">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 083155.png" alt="Wedding Celebration" loading="lazy"></div>
+                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 083657.png" alt="Haldi Ceremony" loading="lazy"></div>
+                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 083738.png" alt="Traditional Ceremony" loading="lazy"></div>
+                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 084104.png" alt="Family Event" loading="lazy"></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                                <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20enquire%20about%20hosting%20an%20event%20or%20wedding%20at%20Heritage%20Pool%20Villa.%20Please%20share%20details."
+                                    target="_blank" class="btn-room btn-room-event"><i class="fab fa-whatsapp"></i> Contact for Event Booking</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -5387,38 +5803,6 @@
                                         Beds</span><span><i class="fas fa-wind"></i> Balcony</span></div>
                                 <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20a%20Quadruple%20AC%20Room%20in%20Old%20Heritage%20Villa.%20Please%20share%20availability."
                                     target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book This Room</a>
-                            </div>
-                        </div>
-                        <div class="room-card" data-aos="fade-up">
-                            <div class="room-price room-price-full">&#8377;8,000 + GST</div>
-                            <div class="room-image swiper room-swiper" id="swiper-ohv-full">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img
-                                            src="assets/old-heritage-villa/property/veranda-1.avif"
-                                            alt="Old Heritage Villa - Veranda" loading="lazy"></div>
-                                    <div class="swiper-slide"><img
-                                            src="assets/old-heritage-villa/property/veranda-2.avif"
-                                            alt="Old Heritage Villa Veranda" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-1.avif"
-                                            alt="Old Heritage Villa Room" loading="lazy"></div>
-                                    <div class="swiper-slide"><img
-                                            src="assets/old-heritage-villa/bathrooms/bathroom-1.avif"
-                                            alt="Old Heritage Villa Bathroom" loading="lazy"></div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
-                            <div class="room-info">
-                                <h3>Book Full Old Heritage Villa</h3>
-                                <p>Entire Old Heritage Villa for your group. Accommodates up to 8 guests. Features 4
-                                    beds
-                                    across 2 rooms. Perfect for families seeking a traditional Kerala experience.</p>
-                                <div class="room-amenities"><span><i class="fas fa-users"></i> Up to 8
-                                        Guests</span><span><i class="fas fa-bed"></i> 4 Beds</span><span><i
-                                            class="fas fa-door-open"></i> 2 Rooms</span></div>
-                                <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20the%20Full%20Old%20Heritage%20Villa.%20Please%20share%20availability."
-                                    target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book Full Villa</a>
                             </div>
                         </div>
                     </div>
@@ -5531,35 +5915,149 @@
                                     target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book Full Villa</a>
                             </div>
                         </div>
-                        <div class="room-card room-card-event" data-aos="fade-up">
-                            <div class="room-price room-price-event">Events & Weddings</div>
-                            <div class="room-info room-event-info">
-                                <h3><i class="fas fa-champagne-glasses"></i>Host Your Event Here</h3>
-                                <p>Heritage Pool Villa is the perfect venue for destination weddings, engagements, Haldi ceremonies, and Choroonu events. Private pool, garden space, and full privacy.</p>
-                                <div class="room-amenities"><span><i class="fas fa-users"></i> Up to 14 Guests</span><span><i class="fas fa-swimming-pool"></i> Pool Venue</span><span><i class="fas fa-utensils"></i> Catering</span></div>
-                                <div class="event-video-wrap">
-                                    <div class="swiper event-swiper" id="swiper-event-room">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 083155.png" alt="Wedding Celebration" loading="lazy"></div>
-                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 083657.png" alt="Haldi Ceremony" loading="lazy"></div>
-                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 083738.png" alt="Traditional Ceremony" loading="lazy"></div>
-                                            <div class="swiper-slide"><img src="assets/events/Screenshot 2026-04-04 084104.png" alt="Family Event" loading="lazy"></div>
-                                        </div>
-                                        <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-button-next"></div>
-                                    </div>
-                                </div>
-                                <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20enquire%20about%20hosting%20an%20event%20or%20wedding%20at%20Heritage%20Pool%20Villa.%20Please%20share%20details."
-                                    target="_blank" class="btn-room btn-room-event"><i class="fab fa-whatsapp"></i> Contact for Event Booking</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="rooms-note" data-aos="fade-up">
                     <p><i class="fas fa-info-circle"></i> All prices are per night and exclusive of GST. Contact us for
                         current rates, seasonal pricing, and availability.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- 10. CONTACT -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Get in Touch</h2>
+                    <p class="subtitle">We'd Love to Hear from You</p>
+                    <div class="deco-line"><span></span><i class="fas fa-house-chimney"></i><span></span></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info-card" data-aos="fade-right">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="contact-details">
+                                <h5>Address</h5>
+                                <p>Guruvayur Homestay<br>Pulikkottil Padippurakal House<br>Thiruvenkidom<br>Guruvayur,
+                                    Kerala - 680101</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-details">
+                                <h5>Phone</h5><a href="tel:+918157966655" aria-label="Call +91 81579 66655">+91 81579 66655</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-details">
+                                <h5>WhatsApp</h5><a
+                                    href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20a%20room.%20Please%20share%20availability."
+                                    target="_blank">Chat with us <i class="fas fa-arrow-right fa-xs"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-location-dot"></i></div>
+                            <div class="contact-details">
+                                <h5>Find Us</h5><a href="https://maps.app.goo.gl/EzNqLRp8Z5z6fCjR6" target="_blank">View
+                                    on Google Maps <i class="fas fa-arrow-right fa-xs"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="contact-details">
+                                <h5>Instagram</h5><a href="https://www.instagram.com/guruvayurhomestay/?hl=en"
+                                    target="_blank">Follow us on Instagram <i class="fas fa-arrow-right fa-xs"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h5>Email</h5><a href="mailto:guruvayurhomestay@gmail.com">guruvayurhomestay@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="check-times">
+                            <h5><i class="fas fa-clock" style="color:var(--gold)"></i> Check-in / Check-out</h5>
+                            <div class="time-row"><span>Check-in</span><span>03:00 PM</span></div>
+                            <div class="time-row"><span>Check-out</span><span>01:00 PM</span></div>
+                            <p class="note">Early check-in / late checkout subject to availability</p>
+                        </div>
+                    </div>
+                    <div class="contact-form-card" data-aos="fade-left">
+                        <h3>Stay & Event Enquiry</h3>
+                        <form id="bookingForm" onsubmit="submitForm(event)">
+                            <div class="form-row">
+                                <div class="form-group"><label>Full Name <span class="required">*</span></label><input
+                                        type="text" id="fullName" required placeholder="Your full name"></div>
+                                <div class="form-group"><label>Phone <span class="required">*</span></label><input
+                                        type="tel" id="phone" required placeholder="+91 XXXXX XXXXX"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Check-in <span class="required">*</span></label><input
+                                        type="date" id="checkin" required></div>
+                                <div class="form-group"><label>Check-out <span class="required">*</span></label><input
+                                        type="date" id="checkout" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Guests</label>
+                                    <div style="display:flex;gap:10px;">
+                                        <select id="adults" style="flex:1;">
+                                            <option value="1 Adult">1 Adult</option>
+                                            <option value="2 Adults" selected>2 Adults</option>
+                                            <option value="3 Adults">3 Adults</option>
+                                            <option value="4 Adults">4 Adults</option>
+                                            <option value="5+ Adults">5+ Adults</option>
+                                        </select>
+                                        <select id="children" style="flex:1;">
+                                            <option value="0 Children">0 Children</option>
+                                            <option value="1 Child">1 Child</option>
+                                            <option value="2 Children">2 Children</option>
+                                            <option value="3+ Children">3+ Children</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label>Stay / Venue Selection</label><select id="roomPref"
+                                        onchange="updatePrice()">
+                                        <option value="" data-price="">Select Option</option>
+                                        <optgroup label="White Villa">
+                                            <option value="White Villa - Deluxe AC Room" data-price="&#8377;2,500 + GST">
+                                                Deluxe AC Room (&#8377;2,500 + GST)</option>
+                                            <option value="White Villa - Full Property (12 guests)"
+                                                data-price="&#8377;14,000 + GST">Full Property (12 guests) (&#8377;14,000 + GST)</option>
+                                        </optgroup>
+                                        <optgroup label="Old Heritage Villa">
+                                            <option value="Old Heritage Villa - Quadruple AC Room"
+                                                data-price="&#8377;4,000 + GST">Quadruple AC Room (&#8377;4,000 + GST)</option>
+                                            <option value="Old Heritage Villa - Full Property (8 guests)"
+                                                data-price="&#8377;8,000 + GST">Full Property (8 guests) (&#8377;8,000 + GST)</option>
+                                        </optgroup>
+                                        <optgroup label="Heritage Pool Villa">
+                                            <option value="Heritage Pool Villa - Quadruple Bed Room"
+                                                data-price="&#8377;5,200 + GST">Quadruple Bed Room (&#8377;5,200 + GST)</option>
+                                            <option value="Heritage Pool Villa - Double Deluxe Room"
+                                                data-price="&#8377;3,000 + GST">Double Deluxe Room (&#8377;3,000 + GST)</option>
+                                            <option value="Heritage Pool Villa - Full Property (14 guests)"
+                                                data-price="&#8377;18,000 + GST">Full Property (14 guests) (&#8377;18,000 + GST)</option>
+                                        </optgroup>
+                                        <optgroup label="Events & Weddings">
+                                            <option value="Wedding / Engagement" data-price="">Wedding / Engagement</option>
+                                            <option value="Haldi Ceremony" data-price="">Haldi Ceremony</option>
+                                            <option value="Choroonu / First Rice" data-price="">Choroonu / First Rice</option>
+                                            <option value="Family Function" data-price="">Family Function</option>
+                                            <option value="Other Event" data-price="">Other Event</option>
+                                        </optgroup>
+                                    </select></div>
+                            </div>
+                            <div class="form-group"><label>Message</label><textarea id="message" rows="4"
+                                    placeholder="Tell us about your travel plans, number of guests, special requests..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fab fa-whatsapp"></i> Send Enquiry</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -6811,152 +7309,6 @@
                         target="_blank" class="btn-book" style="margin-top:20px;">
                         <i class="fab fa-whatsapp"></i> Chat With Us on WhatsApp
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- 10. CONTACT -->
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Get in Touch</h2>
-                    <p class="subtitle">We'd Love to Hear from You</p>
-                    <div class="deco-line"><span></span><i class="fas fa-house-chimney"></i><span></span></div>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-info-card" data-aos="fade-right">
-                        <h3>Contact Information</h3>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
-                            <div class="contact-details">
-                                <h5>Address</h5>
-                                <p>Guruvayur Homestay<br>Pulikkottil Padippurakal House<br>Thiruvenkidom<br>Guruvayur,
-                                    Kerala - 680101</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="contact-details">
-                                <h5>Phone</h5><a href="tel:+918157966655" aria-label="Call +91 81579 66655">+91 81579 66655</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div class="contact-details">
-                                <h5>WhatsApp</h5><a
-                                    href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20a%20room.%20Please%20share%20availability."
-                                    target="_blank">Chat with us <i class="fas fa-arrow-right fa-xs"></i></a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-location-dot"></i></div>
-                            <div class="contact-details">
-                                <h5>Find Us</h5><a href="https://maps.app.goo.gl/EzNqLRp8Z5z6fCjR6" target="_blank">View
-                                    on Google Maps <i class="fas fa-arrow-right fa-xs"></i></a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-                            <div class="contact-details">
-                                <h5>Instagram</h5><a href="https://www.instagram.com/guruvayurhomestay/?hl=en"
-                                    target="_blank">Follow us on Instagram <i class="fas fa-arrow-right fa-xs"></i></a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-details">
-                                <h5>Email</h5><a href="mailto:guruvayurhomestay@gmail.com">guruvayurhomestay@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="check-times">
-                            <h5><i class="fas fa-clock" style="color:var(--gold)"></i> Check-in / Check-out</h5>
-                            <div class="time-row"><span>Check-in</span><span>03:00 PM</span></div>
-                            <div class="time-row"><span>Check-out</span><span>01:00 PM</span></div>
-                            <p class="note">Early check-in / late checkout subject to availability</p>
-                        </div>
-                    </div>
-                    <div class="contact-form-card" data-aos="fade-left">
-                        <h3>Stay & Event Enquiry</h3>
-                        <form id="bookingForm" onsubmit="submitForm(event)">
-                            <div class="form-row">
-                                <div class="form-group"><label>Full Name <span class="required">*</span></label><input
-                                        type="text" id="fullName" required placeholder="Your full name"></div>
-                                <div class="form-group"><label>Phone <span class="required">*</span></label><input
-                                        type="tel" id="phone" required placeholder="+91 XXXXX XXXXX"></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group"><label>Check-in <span class="required">*</span></label><input
-                                        type="date" id="checkin" required></div>
-                                <div class="form-group"><label>Check-out <span class="required">*</span></label><input
-                                        type="date" id="checkout" required></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group"><label>Guests</label>
-                                    <div style="display:flex;gap:10px;">
-                                        <select id="adults" style="flex:1;">
-                                            <option value="1 Adult">1 Adult</option>
-                                            <option value="2 Adults" selected>2 Adults</option>
-                                            <option value="3 Adults">3 Adults</option>
-                                            <option value="4 Adults">4 Adults</option>
-                                            <option value="5+ Adults">5+ Adults</option>
-                                        </select>
-                                        <select id="children" style="flex:1;">
-                                            <option value="0 Children">0 Children</option>
-                                            <option value="1 Child">1 Child</option>
-                                            <option value="2 Children">2 Children</option>
-                                            <option value="3+ Children">3+ Children</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group"><label>Stay / Venue Selection</label><select id="roomPref"
-                                        onchange="updatePrice()">
-                                        <option value="" data-price="">Select Option</option>
-                                        <optgroup label="White Villa">
-                                            <option value="White Villa - Deluxe AC Room" data-price="&#8377;2,500 + GST">
-                                                Deluxe AC Room (&#8377;2,500 + GST)</option>
-                                            <option value="White Villa - Full Property (12 guests)"
-                                                data-price="&#8377;14,000 + GST">Full Property (&#8377;14,000 + GST)</option>
-                                            <option value="White Villa - Quadruple AC Room"
-                                                data-price="&#8377;4,000 + GST">Quadruple AC Room (&#8377;4,000 + GST)</option>
-                                        </optgroup>
-                                        <optgroup label="Heritage Pool Villa">
-                                            <option value="Heritage Pool Villa - Quadruple Bed Room"
-                                                data-price="&#8377;5,200 + GST">Quadruple Bed Room (&#8377;5,200 + GST)</option>
-                                            <option value="Heritage Pool Villa - Double Deluxe Room"
-                                                data-price="&#8377;3,000 + GST">Double Deluxe Room (&#8377;3,000 + GST)</option>
-                                            <option value="Heritage Pool Villa - Full Property"
-                                                data-price="&#8377;18,000 + GST">Full Property - 14 Guests (&#8377;18,000 + GST)
-                                            </option>
-                                        </optgroup>
-                                    </select>
-                                    <div id="roomPriceDisplay"
-                                        style="color:var(--gold); font-weight:600; margin-top:8px; font-size:0.95rem;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"><label>Purpose</label><select id="purpose">
-                                    <option value="">Select Purpose</option>
-                                    <option>Temple Darshan</option>
-                                    <option>Wedding / Engagement</option>
-                                    <option>Ceremony (Choroonu/Haldi)</option>
-                                    <option>Family Function</option>
-                                    <option>Tourism</option>
-                                    <option>Other</option>
-                                </select></div>
-                            <div class="form-group"><label>Special Requests</label><textarea id="requests"
-                                    placeholder="Any special requirements..."></textarea></div>
-                            <button type="submit" class="btn-submit" aria-label="Submit Enquiry via WhatsApp"><i
-                                    class="fab fa-whatsapp"></i> Submit Enquiry via WhatsApp</button>
-                            <div style="text-align:center; margin-top:15px;">
-                                <a href="tel:+918157966655"
-                                    style="color:var(--gold); font-size:0.9rem; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;"
-                                    aria-label="Call Guruvayur Homestay">Prefer to call? <i
-                                        class="fas fa-phone-alt"></i></a>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </section></main>
