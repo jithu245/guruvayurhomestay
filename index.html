@@ -1514,7 +1514,40 @@
         }
 
         .property-group {
-            margin-bottom: 50px
+            margin-bottom: 50px;
+        }
+
+        .properties-row {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .properties-row .property-group {
+            flex: 1;
+            min-width: 340px;
+            max-width: 520px;
+            margin-bottom: 0;
+        }
+
+        .properties-row .rooms-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @media (max-width: 1100px) {
+            .properties-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            .properties-row .property-group {
+                width: 100%;
+                max-width: 100%;
+            }
         }
 
         .property-title {
@@ -2142,6 +2175,54 @@
             line-height: 1.8;
             margin-bottom: 15px;
             font-size: 0.95rem;
+        }
+
+        .why-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .why-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .why-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(123, 31, 31, 0.9);
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .why-image-badge span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .why-image-badge i {
+            color: #ffd700;
+        }
+
+        @media (max-width: 768px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-image {
+                order: -1;
+            }
         }
 
         .why-comparison {
@@ -5519,7 +5600,7 @@
                 <li class="menu-mobile-btn"><a href="#contact" class="btn-book" onclick="closeMenu()"><i
                             class="fas fa-calendar-check"></i>
                         Enquire Now</a></li>
-                <li class="nav-cta"><a href="#contact" class="btn-book"><i
+                <li class="nav-cta"><a href="#contact" class="btn-book" onclick="closeMenu()"><i
                             class="fas fa-calendar-check"></i>
                         Enquire Now</a></li>
                 <li class="menu-mobile-footer">
@@ -5703,7 +5784,7 @@
                             <div class="room-info room-event-info">
                                 <h3><i class="fas fa-champagne-glasses"></i>Host Your Event Here</h3>
                                 <p>Heritage Pool Villa is the perfect venue for destination weddings, engagements, Haldi ceremonies, and Choroonu events. Private pool, garden space, and full privacy.</p>
-                                <div class="room-amenities"><span><i class="fas fa-users"></i> Up to 14 Guests</span><span><i class="fas fa-swimming-pool"></i> Pool Venue</span><span><i class="fas fa-utensils"></i> Catering</span></div>
+                                <div class="room-amenities"><span><i class="fas fa-swimming-pool"></i> Pool Venue</span><span><i class="fas fa-utensils"></i> Catering</span></div>
                                 <div class="event-video-wrap">
                                     <div class="swiper event-swiper" id="swiper-event-room">
                                         <div class="swiper-wrapper">
@@ -5735,74 +5816,75 @@
                     <div class="deco-line"><span></span><i class="fas fa-house-chimney"></i><span></span></div>
                 </div>
 
-                <!-- WHITE VILLA -->
-                <div class="property-group" data-aos="fade-up">
-                    <h3 class="property-title">White Villa</h3>
-                    <p class="property-subtitle">A charming standalone villa with modern comforts and elegant interiors
-                    </p>
-                    <div class="rooms-grid">
-                        <div class="room-card" data-aos="fade-up">
-                            <div class="room-price">&#8377;2,500 + GST</div>
-                            <div class="room-image swiper room-swiper" id="swiper-wv-deluxe">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="assets/white-villa/rooms/room-1.avif"
-                                            alt="Deluxe AC Room - White Villa" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/white-villa/rooms/room-2.avif"
-                                            alt="Deluxe AC Room 2" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/white-villa/rooms/room-3.avif"
-                                            alt="Deluxe AC Room 3" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/white-villa/rooms/room-4.avif"
-                                            alt="Deluxe AC Room 4" loading="lazy"></div>
+                <!-- WHITE VILLA & OLD HERITAGE VILLA -->
+                <div class="properties-row">
+                    <div class="property-group" data-aos="fade-up">
+                        <h3 class="property-title">White Villa</h3>
+                        <p class="property-subtitle">A charming standalone villa with modern comforts</p>
+                        <div class="rooms-grid">
+                            <div class="room-card" data-aos="fade-up">
+                                <div class="room-price">&#8377;2,500 + GST</div>
+                                <div class="room-image swiper room-swiper" id="swiper-wv-deluxe">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="assets/white-villa/rooms/room-1.avif" alt="Deluxe AC Room - White Villa" loading="lazy"></div>
+                                        <div class="swiper-slide"><img src="assets/white-villa/rooms/room-2.avif" alt="Deluxe AC Room 2" loading="lazy"></div>
+                                        <div class="swiper-slide"><img src="assets/white-villa/rooms/room-3.avif" alt="Deluxe AC Room 3" loading="lazy"></div>
+                                        <div class="swiper-slide"><img src="assets/white-villa/rooms/room-4.avif" alt="Deluxe AC Room 4" loading="lazy"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
                                 </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
+                                <div class="room-info">
+                                    <h3>Deluxe AC Room</h3>
+                                    <p>Perfect for couples. Features 1 King Bed, attached bathroom, private terrace, living room, AC, Wi-Fi.</p>
+                                    <div class="room-amenities"><span><i class="fas fa-snowflake"></i> AC</span><span><i class="fas fa-wifi"></i> WiFi</span><span><i class="fas fa-couch"></i> Living Room</span><span><i class="fas fa-car"></i> Parking</span></div>
+                                    <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20a%20Deluxe%20AC%20Room%20in%20White%20Villa.%20Please%20share%20availability." target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book This Room</a>
+                                </div>
                             </div>
-                            <div class="room-info">
-                                <h3>Deluxe AC Room</h3>
-                                <p>Perfect for couples. Features 1 King Bed, attached bathroom (hot &amp; cold water),
-                                    private
-                                    terrace, living room, and parking. <br>Equipped with AC, Wi-Fi, work desk, and
-                                    kettle.
-                                </p>
-                                <div class="room-amenities"><span><i class="fas fa-snowflake"></i> AC</span><span><i
-                                            class="fas fa-wifi"></i> WiFi</span><span><i class="fas fa-couch"></i>
-                                        Living
-                                        Room</span><span><i class="fas fa-car"></i> Parking</span></div>
-                                <div class="extra-bed-badge"><i class="fas fa-bed"></i> Extra Bed Available - &#8377;500 + GST
+                            <div class="room-card" data-aos="fade-up">
+                                <div class="room-price">&#8377;14,000 + GST</div>
+                                <div class="room-image swiper room-swiper" id="swiper-wv-full">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="assets/white-villa/property/exterior-hero.avif" alt="White Villa Full Property" loading="lazy"></div>
+                                        <div class="swiper-slide"><img src="assets/white-villa/property/exterior-1.avif" alt="White Villa Property View" loading="lazy"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
                                 </div>
-                                <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20a%20Deluxe%20AC%20Room%20in%20White%20Villa.%20Please%20share%20availability."
-                                    target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book This Room</a>
+                                <div class="room-info">
+                                    <h3>White Villa - Full Property</h3>
+                                    <p>Entire White Villa with 6 Deluxe AC Rooms. Perfect for large families and groups.</p>
+                                    <div class="room-amenities"><span><i class="fas fa-door-open"></i> 6 Deluxe AC Rooms</span><span><i class="fas fa-users"></i> Full Privacy</span><span><i class="fas fa-car"></i> Parking</span></div>
+                                    <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20the%20full%20White%20Villa%20property.%20Please%20share%20availability." target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book Full Property</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="room-card" data-aos="fade-up">
-                            <div class="room-price">&#8377;4,000 + GST</div>
-                            <div class="room-image swiper room-swiper" id="swiper-ohv-quad">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-1.avif"
-                                            alt="Quadruple AC Room - Old Heritage Villa" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-2.avif"
-                                            alt="Quadruple AC Room 2" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-3.avif"
-                                            alt="Quadruple AC Room 3" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-4.avif"
-                                            alt="Quadruple AC Room 4" loading="lazy"></div>
+                    </div>
+                    <div class="property-group" data-aos="fade-up">
+                        <h3 class="property-title">Old Heritage Villa</h3>
+                        <p class="property-subtitle">Traditional Kerala heritage villa</p>
+                        <div class="rooms-grid">
+                            <div class="room-card" data-aos="fade-up">
+                                <div class="room-price">&#8377;4,000 + GST</div>
+                                <div class="room-image swiper room-swiper" id="swiper-ohv-quad">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-1.avif" alt="Quadruple AC Room - Old Heritage Villa" loading="lazy"></div>
+                                        <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-2.avif" alt="Quadruple AC Room 2" loading="lazy"></div>
+                                        <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-3.avif" alt="Quadruple AC Room 3" loading="lazy"></div>
+                                        <div class="swiper-slide"><img src="assets/old-heritage-villa/rooms/room-4.avif" alt="Quadruple AC Room 4" loading="lazy"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
                                 </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
-                            <div class="room-info">
-                                <h3>Quadruple AC Room</h3>
-                                <p>Ideal for families or groups. Features 2 Double Beds, private bedroom, attached
-                                    bathroom,
-                                    and a balcony. <br>Includes shared terrace, living room access, AC, and Wi-Fi.</p>
-                                <div class="room-amenities"><span><i class="fas fa-snowflake"></i> AC</span><span><i
-                                            class="fas fa-wifi"></i> WiFi</span><span><i class="fas fa-bed"></i> 2
-                                        Double
-                                        Beds</span><span><i class="fas fa-wind"></i> Balcony</span></div>
-                                <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20a%20Quadruple%20AC%20Room%20in%20Old%20Heritage%20Villa.%20Please%20share%20availability."
-                                    target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book This Room</a>
+                                <div class="room-info">
+                                    <h3>Quadruple AC Room</h3>
+                                    <p>Ideal for families. Features 2 Double Beds, private bedroom, attached bathroom, and balcony.</p>
+                                    <div class="room-amenities"><span><i class="fas fa-snowflake"></i> AC</span><span><i class="fas fa-wifi"></i> WiFi</span><span><i class="fas fa-bed"></i> 2 Double Beds</span><span><i class="fas fa-wind"></i> Balcony</span></div>
+                                    <a href="https://wa.me/918157966655?text=Hello!%20I%20would%20like%20to%20book%20a%20Quadruple%20AC%20Room%20in%20Old%20Heritage%20Villa.%20Please%20share%20availability." target="_blank" class="btn-room"><i class="fab fa-whatsapp"></i> Book This Room</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -5813,8 +5895,7 @@
                 <!-- HERITAGE POOL VILLA -->
                 <div class="property-group" data-aos="fade-up">
                     <h3 class="property-title">Heritage Pool Villa</h3>
-                    <p class="property-subtitle">A heritage villa with a private swimming pool - the ultimate luxury
-                        retreat</p>
+                    <p class="property-subtitle">A heritage villa with a private swimming pool - the ultimate luxury retreat</p>
                     <div class="rooms-grid">
                         <div class="room-card" data-aos="fade-up">
                             <div class="room-price">&#8377;5,200 + GST</div>
@@ -6220,6 +6301,13 @@
                         <p>Unlike standard hotels, our two properties are located next to each other, giving you the
                             flexibility to choose individual rooms or book entire villas. Every stay includes
                             home-cooked Kerala meals, free WiFi, free parking, and 24/7 support from our dedicated team.</p>
+                    </div>
+                    <div class="why-image" data-aos="fade-left">
+                        <img src="assets/white-villa/property/exterior-hero.avif" alt="Guruvayur Homestay - Heritage Villa" loading="lazy">
+                        <div class="why-image-badge">
+                            <span><i class="fas fa-star"></i> 4.5/5 Rating</span>
+                            <span>300+ Happy Guests</span>
+                        </div>
                     </div>
                 </div>
             </div>
